@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{02E2C346-CF7D-45DB-BD5C-B12CAD80ADD2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>reports.win.Module</RootNamespace>
+    <AssemblyName>reports.win.Module</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'EasyTest|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\EasyTest\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;EASYTEST</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Dashboard.v23.1.Core">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Data.v23.1">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v23.1">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Drawing.v23.1">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.AuditTrail.Xpo.v23.1">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Chart.v23.1">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.ConditionalAppearance.v23.1">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Dashboards.v23.1">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Kpi.v23.1">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Notifications.v23.1">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Objects.v23.1">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.ReportsV2.v23.1">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Scheduler.v23.1">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Security.v23.1">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Security.Xpo.v23.1">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.StateMachine.v23.1">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.v23.1">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Validation.v23.1">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Workflow.v23.1">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Xpo.v23.1">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Images.v23.1">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Persistent.Base.v23.1">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Persistent.BaseImpl.Xpo.v23.1">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v23.1.Core">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v23.1">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Workflow.Activities.v23.1">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v23.1">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v23.1">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v23.1">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v23.1.Core">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v23.1.Core.Desktop">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="MailBee.NET, Version=12.0.0.615, Culture=neutral, PublicKeyToken=cd85b70fb26f9fc1, processorArchitecture=MSIL">
+      <HintPath>..\packages\MailBee.NET.12.0.0\lib\net45\MailBee.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Activities">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Activities.DurableInstancing">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Core">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Data">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Runtime.DurableInstancing">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.ServiceModel.Activities">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Xaml">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Xml">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessObjects\AparienciasSolicitudes.cs" />
+    <Compile Include="BusinessObjects\CatalogoCarrera.cs" />
+    <Compile Include="BusinessObjects\CatalogoProfesores.cs" />
+    <Compile Include="BusinessObjects\CatalogoSexo.cs" />
+    <Compile Include="BusinessObjects\CatalogoUbicacion.cs" />
+    <Compile Include="BusinessObjects\Interfaces\IReporteImpresion.cs" />
+    <Compile Include="BusinessObjects\Interfaces\ISupportCustomAppearance.cs" />
+    <Compile Include="BusinessObjects\Interfaces\ISupportCustomNotifications.cs" />
+    <Compile Include="BusinessObjects\Interfaces\ISupportSecuencia.cs" />
+    <Compile Include="BusinessObjects\Interfaces\ISupportTypeProperties.cs" />
+    <Compile Include="BusinessObjects\NonPersistent\clsParameterNotas.cs" />
+    <Compile Include="BusinessObjects\NotificacionesCorreos.cs" />
+    <Compile Include="BusinessObjects\Persona.cs" />
+    <Compile Include="BusinessObjects\PersonaIdentificaciones.cs" />
+    <Compile Include="BusinessObjects\Secuencia.cs" />
+    <Compile Include="BusinessObjects\Solicitudes.cs" />
+    <Compile Include="BusinessObjects\SolicitudesLogonParameters.cs" />
+    <Compile Include="BusinessObjects\Solicitudes_Auditoria.cs" />
+    <Compile Include="BusinessObjects\Solicitudes_Reportes.cs" />
+    <Compile Include="BusinessObjects\TipoIdentificaciones.cs" />
+    <Compile Include="BusinessObjects\Usuario.cs" />
+    <Compile Include="BusinessObjects\ValueConverters\ColorValueConverter.cs" />
+    <Compile Include="BusinessObjects\ValueConverters\ImplementedTypeConverter.cs" />
+    <Compile Include="Controllers\CustomAppearanceController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\CustomAppearanceController.Designer.cs">
+      <DependentUpon>CustomAppearanceController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\SecuenciaController.cs" />
+    <Compile Include="Controllers\ShowDetailViewFromListViewController.cs" />
+    <Compile Include="DatabaseUpdate\Updater.cs" />
+    <Compile Include="BusinessObjects\ApplicationUser.cs" />
+    <Compile Include="BusinessObjects\ApplicationUserLoginInfo.cs" />
+    <Compile Include="General\EsUsuarioOperador.cs" />
+    <Compile Include="General\Principal.cs" />
+    <Compile Include="Module.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module.Designer.cs">
+      <DependentUpon>Module.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Model.DesignedDiffs.xafml" />
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BusinessObjects\ReadMe.txt" />
+    <None Include="Controllers\ReadMe.txt" />
+    <None Include="DatabaseUpdate\ReadMe.txt" />
+    <None Include="Images\ReadMe.txt" />
+    <None Include="packages.config" />
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Welcome.html" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
