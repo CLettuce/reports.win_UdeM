@@ -10,7 +10,7 @@ using DevExpress.Persistent.BaseImpl;
 using DevExpress.XtraEditors;
 using reports.win.Module.BusinessObjects;
 using reports.win.Module.General;
-using TramitesInstitucional.Win;
+using reports.win.Win;
 using static reports.win.Module.BusinessObjects.SolicitudesLogonParameters;
 
 namespace reports.win.Win {

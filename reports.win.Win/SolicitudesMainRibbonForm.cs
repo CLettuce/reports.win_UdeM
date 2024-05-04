@@ -17,7 +17,7 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace TramitesInstitucional.Win
+namespace reports.win.Win
 {
     public partial class SolicitudesMainRibbonForm : RibbonForm, IActionControlsSite, IContextMenuHolder, IWindowTemplate, IDockManagerHolder, IBarManagerHolder, ISupportViewChanged, IXafDocumentsHostWindow, ISupportUpdate, IViewSiteTemplate, ISupportStoreSettings, IViewHolder, INavigationPanelHolder
     {

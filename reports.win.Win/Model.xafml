@@ -26,7 +26,9 @@
           <Item Id="AparienciasSolicitudes_ListView" ViewId="AparienciasSolicitudes_ListView" ObjectKey="" ImageName="MoreColors" IsNewNode="True" />
           <Item Id="Notificaciones Correo" Caption="Notificaciones Correo" IsNewNode="True">
             <Items IsNewNode="True">
+              <Item Id="@9daeed23-a5fc-4189-9c5c-d18a3fa01c7d" ViewId="PlantillaCorreoSolicitudes_ListView" IsNewNode="True" />
               <Item Id="NotificacionesCorreos_ListView" ViewId="NotificacionesCorreos_ListView" ObjectKey="" ImageName="BO_FileAttachment" IsNewNode="True" />
+              <Item Id="PlantillasCorreoReglasSolicitudes_ListView" ViewId="PlantillasCorreoReglasSolicitudes_ListView" ObjectKey="" IsNewNode="True" />
             </Items>
           </Item>
           <Item Id="Secuencia_ListView" ViewId="Secuencia_ListView" ObjectKey="" ImageName="Security_Fingerprint" IsNewNode="True" />
@@ -55,6 +57,7 @@
           <Item Id="PermissionPolicyRole_ListView" Removed="True" />
           <Item Id="Persona_ListView" Removed="True" />
           <Item Id="PersonaIdentificaciones_ListView" Removed="True" />
+          <Item Id="PlantillasCorreoReglasSolicitudes_ListView" Removed="True" />
           <Item Id="Secuencia_ListView" Removed="True" />
           <Item Id="Solicitudes_Auditoria_ListView" Removed="True" />
           <Item Id="Solicitudes_Reportes_ListView" Removed="True" />
@@ -155,6 +158,22 @@
         <ColumnInfo Id="FechaRegistro" Index="2" Width="175" />
       </Columns>
     </ListView>
+    <DetailView Id="PlantillaCorreoSolicitudes_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="16.723549488054609">
+            <LayoutGroup Id="PlantillaCorreoSolicitudes" RelativeSize="0">
+              <LayoutItem Id="Asunto" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="RichTextMailMergeData" RelativeSize="0">
+              <LayoutItem Id="Name" RelativeSize="47.540983606557376" />
+              <LayoutItem Id="DataType" RelativeSize="52.459016393442624" />
+              <LayoutItem Id="Template" Index="1" RelativeSize="83.2764505119454" ViewItem="Template" IsNewNode="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
     <DetailView Id="Solicitudes_Reportes_DetailView">
       <Items>
         <PropertyEditor Id="Carrera" PropertyName="Carrera" LookupProperty="Carrera" />
@@ -165,20 +184,20 @@
         <TabbedGroup Id="MainTab" RelativeSize="100" Index="0" IsNewNode="True">
           <LayoutGroup Id="Main" Index="0" RelativeSize="100" ShowCaption="True" ImageName="BO_Address" Caption="Principal" IsNewNode="True">
             <LayoutGroup Id="SimpleEditors" Index="0" ShowCaption="False" RelativeSize="100" IsNewNode="True">
-              <LayoutGroup Id="Solicitudes_Reportes" Index="0" Direction="Horizontal" ShowCaption="True" RelativeSize="28.884826325411336" GroupStyle="Card" IsNewNode="True">
-                <LayoutGroup Id="Solicitudes_Reportes_col1" Index="0" ShowCaption="False" RelativeSize="49.86149584487535" IsNewNode="True">
-                  <LayoutItem Id="Estado" ViewItem="Estado" ShowCaption="" Index="0" RelativeSize="28.333333333333332" IsNewNode="True" />
-                  <LayoutItem Id="NombreCompletoPersona" ViewItem="NombreCompletoPersona" Index="1" RelativeSize="21.666666666666668" IsNewNode="True" />
-                  <LayoutItem Id="Descripcion" ViewItem="Descripcion" Index="2" RelativeSize="21.666666666666668" SizeConstraintsType="Custom" MinSize="240, 26" IsNewNode="True" />
-                  <LayoutItem Id="Carrera" ViewItem="Carrera" ShowCaption="" Index="3" RelativeSize="28.333333333333332" SizeConstraintsType="Default" MinSize="240, 34" IsNewNode="True" />
+              <LayoutGroup Id="Solicitudes_Reportes" Index="0" Direction="Horizontal" ShowCaption="True" RelativeSize="26.452905811623246" GroupStyle="Card" IsNewNode="True">
+                <LayoutGroup Id="Solicitudes_Reportes_col1" Index="0" ShowCaption="False" RelativeSize="49.789621318373072" IsNewNode="True">
+                  <LayoutItem Id="Estado" ViewItem="Estado" ShowCaption="" Index="0" RelativeSize="36.170212765957444" IsNewNode="True" />
+                  <LayoutItem Id="NombreCompletoPersona" ViewItem="NombreCompletoPersona" Index="1" RelativeSize="27.659574468085108" IsNewNode="True" />
+                  <LayoutItem Id="Carrera" ViewItem="Carrera" ShowCaption="" Index="2" RelativeSize="36.170212765957444" SizeConstraintsType="Default" MinSize="240, 34" IsNewNode="True" />
                 </LayoutGroup>
-                <LayoutGroup Id="Solicitudes_Reportes_col2" Index="1" ShowCaption="False" RelativeSize="50.13850415512465" IsNewNode="True">
-                  <LayoutItem Id="UbicacionDePeticion" ViewItem="UbicacionDePeticion" ShowCaption="" Index="0" RelativeSize="28.333333333333332" IsNewNode="True" />
-                  <LayoutItem Id="Profesor" ViewItem="Profesor" Index="1" RelativeSize="21.666666666666668" IsNewNode="True" />
-                  <LayoutItem Id="Identificacion" ViewItem="Identificacion" ShowCaption="" Index="2" RelativeSize="50" IsNewNode="True" />
+                <LayoutGroup Id="Solicitudes_Reportes_col2" Index="1" ShowCaption="False" RelativeSize="50.210378681626928" IsNewNode="True">
+                  <LayoutItem Id="UbicacionDePeticion" ViewItem="UbicacionDePeticion" ShowCaption="" Index="0" RelativeSize="36.170212765957444" IsNewNode="True" />
+                  <LayoutItem Id="Identificacion" ViewItem="Identificacion" ShowCaption="" Index="1" RelativeSize="27.659574468085108" IsNewNode="True" />
+                  <LayoutItem Id="FechaRegistro" ViewItem="FechaRegistro" Index="2" RelativeSize="36.170212765957444" IsNewNode="True" />
                 </LayoutGroup>
               </LayoutGroup>
-              <LayoutGroup Id="Solicitudes" Index="1" ShowCaption="False" RelativeSize="71.115173674588661" Caption="Descripcion" IsNewNode="True" />
+              <LayoutItem Id="Descripcion" ViewItem="Descripcion" SizeConstraintsType="Custom" MinSize="240, 26" Index="1" RelativeSize="39.078156312625254" IsNewNode="True" />
+              <LayoutGroup Id="Solicitudes" Index="2" ShowCaption="False" RelativeSize="34.4689378757515" Caption="Descripcion" IsNewNode="True" />
             </LayoutGroup>
           </LayoutGroup>
           <LayoutGroup Id="Auditoria" ImageName="Lookup&amp;Reference" Caption="Auditoria" Index="1" ShowCaption="True" TextAlignMode="AlignWithChildren" RelativeSize="100" IsNewNode="True">
@@ -217,7 +236,7 @@
         </LayoutGroup>
       </Layout>
     </DetailView>
-    <ListView Id="Solicitudes_Reportes_ListView" IsGroupPanelVisible="True">
+    <ListView Id="Solicitudes_Reportes_ListView" IsGroupPanelVisible="False">
       <Columns>
         <ColumnInfo Id="CorrecionUsuario" Index="-1" />
         <ColumnInfo Id="FechaCorrecion" Index="-1" />

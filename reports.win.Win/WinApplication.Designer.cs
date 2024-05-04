@@ -41,6 +41,8 @@
             this.kpiModule = new DevExpress.ExpressApp.Kpi.KpiModule();
             this.notificationsModule = new DevExpress.ExpressApp.Notifications.NotificationsModule();
             this.notificationsWindowsFormsModule = new DevExpress.ExpressApp.Notifications.Win.NotificationsWindowsFormsModule();
+            this.officeModule = new DevExpress.ExpressApp.Office.OfficeModule();
+            this.officeWindowsFormsModule = new DevExpress.ExpressApp.Office.Win.OfficeWindowsFormsModule();
             this.reportsModuleV2 = new DevExpress.ExpressApp.ReportsV2.ReportsModuleV2();
             this.reportsWindowsFormsModuleV2 = new DevExpress.ExpressApp.ReportsV2.Win.ReportsWindowsFormsModuleV2();
             this.schedulerModuleBase = new DevExpress.ExpressApp.Scheduler.SchedulerModuleBase();
@@ -126,6 +128,8 @@
             this.Modules.Add(this.kpiModule);
             this.Modules.Add(this.notificationsModule);
             this.Modules.Add(this.notificationsWindowsFormsModule);
+            this.Modules.Add(this.officeModule);
+            this.Modules.Add(this.officeWindowsFormsModule);
             this.Modules.Add(this.reportsModuleV2);
             this.Modules.Add(this.reportsWindowsFormsModuleV2);
             this.Modules.Add(this.schedulerModuleBase);
@@ -163,6 +167,8 @@
         private DevExpress.ExpressApp.Kpi.KpiModule kpiModule;
         private DevExpress.ExpressApp.Notifications.NotificationsModule notificationsModule;
         private DevExpress.ExpressApp.Notifications.Win.NotificationsWindowsFormsModule notificationsWindowsFormsModule;
+        private DevExpress.ExpressApp.Office.OfficeModule officeModule;
+        private DevExpress.ExpressApp.Office.Win.OfficeWindowsFormsModule officeWindowsFormsModule;
         private DevExpress.ExpressApp.ReportsV2.ReportsModuleV2 reportsModuleV2;
         private DevExpress.ExpressApp.ReportsV2.Win.ReportsWindowsFormsModuleV2 reportsWindowsFormsModuleV2;
         private DevExpress.ExpressApp.Scheduler.SchedulerModuleBase schedulerModuleBase;

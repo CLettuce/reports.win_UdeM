@@ -1,5 +1,5 @@
 ﻿
-namespace TramitesInstitucional.Win
+namespace reports.win.Win
 {
     partial class SolicitudesMainRibbonForm
     {
