@@ -1,4 +1,272 @@
-﻿<Application Logo="ExpressAppLogo">
-	<Options UIType="TabbedMDI" FormStyle="Ribbon" />
-	<NavigationItems NavigationStyle="Accordion" ShowImages="False" DefaultChildItemsDisplayStyle="List"/>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Logo="ExpressAppLogo">
+  <NavigationItems NavigationStyle="TreeList" ShowImages="True" DefaultChildItemsDisplayStyle="LargeIcons" StartupNavigationItem="">
+    <Items>
+      <Item Id="ReportesUdeM" Caption="Reportes UdeM" Index="0" IsNewNode="True">
+        <Items IsNewNode="True">
+          <Item Id="Solicitudes_Reportes_ListView" ViewId="Solicitudes_Reportes_ListView" ObjectKey="" ImageName="BO_Order_Item" IsNewNode="True" />
+        </Items>
+      </Item>
+      <Item Id="RegistroPersonas" Caption="RegistroPersonas" Index="1" IsNewNode="True">
+        <Items IsNewNode="True">
+          <Item Id="Persona_ListView" ViewId="Persona_ListView" ObjectKey="" ImageName="BO_Person" IsNewNode="True" />
+          <Item Id="PersonaIdentificaciones_ListView" ViewId="PersonaIdentificaciones_ListView" ObjectKey="" ImageName="BO_Contact" IsNewNode="True" />
+          <Item Id="Usuario_ListView" ViewId="Usuario_ListView" ObjectKey="" ImageName="BO_Customer" IsNewNode="True" />
+        </Items>
+      </Item>
+      <Item Id="Seguridad" ImageName="BO_Security_Permission" Caption="Seguridad" Index="2" IsNewNode="True">
+        <Items IsNewNode="True">
+          <Item Id="ApplicationUser_ListView" ViewId="ApplicationUser_ListView" ObjectKey="" IsNewNode="True" />
+          <Item Id="MyDetails" ViewId="ApplicationUser_DetailView" ObjectKey="@CurrentUserID" Caption="My Details" ImageName="BO_MyDetails" IsNewNode="True" />
+          <Item Id="PermissionPolicyRole_ListView" ViewId="PermissionPolicyRole_ListView" ObjectKey="" IsNewNode="True" />
+        </Items>
+      </Item>
+      <Item Id="Administracion" Caption="Administracion" Index="3" IsNewNode="True">
+        <Items IsNewNode="True">
+          <Item Id="AparienciasSolicitudes_ListView" ViewId="AparienciasSolicitudes_ListView" ObjectKey="" ImageName="MoreColors" IsNewNode="True" />
+          <Item Id="Notificaciones Correo" Caption="Notificaciones Correo" IsNewNode="True">
+            <Items IsNewNode="True">
+              <Item Id="NotificacionesCorreos_ListView" ViewId="NotificacionesCorreos_ListView" ObjectKey="" ImageName="BO_FileAttachment" IsNewNode="True" />
+            </Items>
+          </Item>
+          <Item Id="Secuencia_ListView" ViewId="Secuencia_ListView" ObjectKey="" ImageName="Security_Fingerprint" IsNewNode="True" />
+          <Item Id="Solicitudes_Auditoria_ListView" ViewId="Solicitudes_Auditoria_ListView" ObjectKey="" IsNewNode="True" />
+        </Items>
+      </Item>
+      <Item Id="Catalogos" Caption="Catalogos" IsNewNode="True">
+        <Items IsNewNode="True">
+          <Item Id="CatalogoCarrera_ListView" ViewId="CatalogoCarrera_ListView" ObjectKey="" ImageName="Actions_Edit" IsNewNode="True" />
+          <Item Id="CatalogoProfesores_ListView" ViewId="CatalogoProfesores_ListView" ObjectKey="" ImageName="Doctor" IsNewNode="True" />
+          <Item Id="CatalogoSexo_ListView" ViewId="CatalogoSexo_ListView" ObjectKey="" ImageName="BO_Department" IsNewNode="True" />
+          <Item Id="CatalogoUbicacion_ListView" ViewId="CatalogoUbicacion_ListView" ObjectKey="" ImageName="BO_Security_Permission_Navigate" IsNewNode="True" />
+          <Item Id="TipoIdentificaciones_ListView" ViewId="TipoIdentificaciones_ListView" ObjectKey="" ImageName="ShowWeightedLegend" IsNewNode="True" />
+        </Items>
+      </Item>
+      <Item Id="Default">
+        <Items>
+          <Item Id="AparienciasSolicitudes_ListView" Removed="True" />
+          <Item Id="ApplicationUser_ListView" Removed="True" />
+          <Item Id="CatalogoCarrera_ListView" Removed="True" />
+          <Item Id="CatalogoProfesores_ListView" Removed="True" />
+          <Item Id="CatalogoSexo_ListView" Removed="True" />
+          <Item Id="CatalogoUbicacion_ListView" Removed="True" />
+          <Item Id="MyDetails" Removed="True" />
+          <Item Id="NotificacionesCorreos_ListView" Removed="True" />
+          <Item Id="PermissionPolicyRole_ListView" Removed="True" />
+          <Item Id="Persona_ListView" Removed="True" />
+          <Item Id="PersonaIdentificaciones_ListView" Removed="True" />
+          <Item Id="Secuencia_ListView" Removed="True" />
+          <Item Id="Solicitudes_Auditoria_ListView" Removed="True" />
+          <Item Id="Solicitudes_Reportes_ListView" Removed="True" />
+          <Item Id="TipoIdentificaciones_ListView" Removed="True" />
+          <Item Id="Usuario_ListView" Removed="True" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <Options UIType="TabbedMDI" FormStyle="Ribbon" />
+  <SchemaModules>
+    <SchemaModule Name="SchedulerModuleBase" Version="23.1.3.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerWindowsFormsModule" Version="23.1.3.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="23.1.3.0" IsNewNode="True" />
+    <SchemaModule Name="SystemWindowsFormsModule" Version="23.1.3.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <DetailView Id="AparienciasSolicitudes_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="64.0677966101695">
+            <LayoutGroup Id="AparienciasSolicitudes" RelativeSize="100">
+              <LayoutGroup Id="AparienciasSolicitudes_col1" RelativeSize="56.32582322357019">
+                <LayoutItem Id="DeclaringType" RelativeSize="10.179640718562874" />
+                <LayoutItem Id="Descripcion" ViewItem="Descripcion" Index="1" RelativeSize="21.556886227544911" IsNewNode="True" />
+                <LayoutItem Id="EstadoApariencia" ViewItem="EstadoApariencia" Index="2" RelativeSize="7.18562874251497" IsNewNode="True" />
+                <LayoutItem Id="AppearanceItemType" ViewItem="AppearanceItemType" Index="3" RelativeSize="7.7844311377245505" IsNewNode="True" />
+                <LayoutItem Id="Context" Index="4" RelativeSize="7.7844311377245505" />
+                <LayoutItem Id="TargetItems" ViewItem="TargetItems" Index="5" RelativeSize="21.556886227544911" SizeConstraintsType="Custom" MinSize="155, 72" IsNewNode="True" />
+                <LayoutItem Id="UsuarioExclusion" ViewItem="UsuarioExclusion" Index="6" RelativeSize="23.952095808383234" SizeConstraintsType="Custom" MinSize="155, 80" IsNewNode="True" />
+                <LayoutItem Id="FontStyle" Index="7" RelativeSize="9.4444444444444446" Removed="True" />
+                <LayoutItem Id="Priority" Index="7" RelativeSize="6.3106796116504853" Removed="True" />
+                <LayoutItem Id="FontColor" Index="8" RelativeSize="8.8082901554404138" Removed="True" />
+                <LayoutItem Id="BackColor" Index="10" RelativeSize="7.762557077625571" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="AparienciasSolicitudes_col2" RelativeSize="43.67417677642981">
+                <LayoutItem Id="BackColor" ViewItem="BackColor" Index="0" RelativeSize="10.179640718562874" IsNewNode="True" />
+                <LayoutItem Id="Enabled" RelativeSize="7.18562874251497" Index="1" />
+                <LayoutItem Id="FontColor" ViewItem="FontColor" Index="2" RelativeSize="7.7844311377245505" IsNewNode="True" />
+                <LayoutItem Id="FontStyle" ViewItem="FontStyle" Index="3" RelativeSize="7.7844311377245505" IsNewNode="True" />
+                <LayoutItem Id="Priority" ViewItem="Priority" Index="4" RelativeSize="7.7844311377245505" IsNewNode="True" />
+                <LayoutItem Id="Visibility" RelativeSize="59.2814371257485" Index="5" />
+                <LayoutItem Id="Method" RelativeSize="51.49700598802395" Index="6" Removed="True" />
+                <LayoutItem Id="AppearanceItemType" RelativeSize="68.656716417910445" Removed="True" />
+                <LayoutItem Id="EstadoApariencia" RelativeSize="54.918032786885249" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutItem Id="Criteria" ViewItem="Criteria" ShowCaption="" Index="1" RelativeSize="35.762711864406782" SizeConstraintsType="Custom" MinSize="160, 72" IsNewNode="True" />
+          <LayoutGroup Id="SizeableEditors" RelativeSize="0.16949152542372881" Caption="SizeableEditors" Index="2">
+            <LayoutItem Id="UsuarioExclusion" Index="1" RelativeSize="51.49700598802395" Removed="True" />
+            <LayoutItem Id="Criteria" RelativeSize="100" Removed="True" />
+            <LayoutItem Id="Descripcion" Removed="True" />
+            <LayoutItem Id="TargetItems" RelativeSize="30.1255230125523" Removed="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Persona_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="22.885572139303484">
+            <LayoutGroup Id="Persona" RelativeSize="100">
+              <LayoutGroup Id="Persona_col1" RelativeSize="49.95475113122172">
+                <LayoutItem Id="Nombre1" Index="0" RelativeSize="36.170212765957444" />
+                <LayoutItem Id="Nombre2" Index="1" RelativeSize="27.659574468085108" />
+                <LayoutItem Id="Apellido1" Index="2" RelativeSize="36.170212765957444" />
+                <LayoutItem Id="NombreCompleto" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Persona_col2" RelativeSize="50.04524886877828">
+                <LayoutItem Id="Apellido2" RelativeSize="36.170212765957444" />
+                <LayoutItem Id="Sexo" RelativeSize="27.659574468085108" Index="1" />
+                <LayoutItem Id="Usuario" RelativeSize="36.170212765957444" Index="2" />
+                <LayoutItem Id="FechaRegistro" RelativeSize="21.666666666666668" ShowCaption="False" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="77.114427860696523">
+            <LayoutGroup Id="Solicitude" TextAlignMode="AlignWithChildren" RelativeSize="100">
+              <LayoutItem Id="Solicitude" TextAlignMode="AutoSize" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="Identificaciones" TextAlignMode="AlignWithChildren" RelativeSize="100">
+              <LayoutItem Id="Identificaciones" TextAlignMode="AutoSize" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Persona_ListView">
+      <Columns>
+        <ColumnInfo Id="Apellido1" Index="-1" />
+        <ColumnInfo Id="Apellido2" Index="-1" />
+        <ColumnInfo Id="Nombre1" Index="-1" />
+        <ColumnInfo Id="Nombre2" Index="-1" />
+        <ColumnInfo Id="Sexo" Index="-1" Width="161" />
+        <ColumnInfo Id="NombreCompleto" Width="327" />
+        <ColumnInfo Id="Usuario" Index="1" Width="223" />
+        <ColumnInfo Id="FechaRegistro" Index="2" Width="175" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Solicitudes_Reportes_DetailView">
+      <Items>
+        <PropertyEditor Id="Carrera" PropertyName="Carrera" LookupProperty="Carrera" />
+        <PropertyEditor Id="Profesor" PropertyName="Profesor" LookupProperty="Profesor" />
+        <PropertyEditor Id="UbicacionDePeticion" LookupProperty="Ubicacion" />
+      </Items>
+      <Layout>
+        <TabbedGroup Id="MainTab" RelativeSize="100" Index="0" IsNewNode="True">
+          <LayoutGroup Id="Main" Index="0" RelativeSize="100" ShowCaption="True" ImageName="BO_Address" Caption="Principal" IsNewNode="True">
+            <LayoutGroup Id="SimpleEditors" Index="0" ShowCaption="False" RelativeSize="100" IsNewNode="True">
+              <LayoutGroup Id="Solicitudes_Reportes" Index="0" Direction="Horizontal" ShowCaption="True" RelativeSize="28.884826325411336" GroupStyle="Card" IsNewNode="True">
+                <LayoutGroup Id="Solicitudes_Reportes_col1" Index="0" ShowCaption="False" RelativeSize="49.86149584487535" IsNewNode="True">
+                  <LayoutItem Id="Estado" ViewItem="Estado" ShowCaption="" Index="0" RelativeSize="28.333333333333332" IsNewNode="True" />
+                  <LayoutItem Id="NombreCompletoPersona" ViewItem="NombreCompletoPersona" Index="1" RelativeSize="21.666666666666668" IsNewNode="True" />
+                  <LayoutItem Id="Descripcion" ViewItem="Descripcion" Index="2" RelativeSize="21.666666666666668" SizeConstraintsType="Custom" MinSize="240, 26" IsNewNode="True" />
+                  <LayoutItem Id="Carrera" ViewItem="Carrera" ShowCaption="" Index="3" RelativeSize="28.333333333333332" SizeConstraintsType="Default" MinSize="240, 34" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutGroup Id="Solicitudes_Reportes_col2" Index="1" ShowCaption="False" RelativeSize="50.13850415512465" IsNewNode="True">
+                  <LayoutItem Id="UbicacionDePeticion" ViewItem="UbicacionDePeticion" ShowCaption="" Index="0" RelativeSize="28.333333333333332" IsNewNode="True" />
+                  <LayoutItem Id="Profesor" ViewItem="Profesor" Index="1" RelativeSize="21.666666666666668" IsNewNode="True" />
+                  <LayoutItem Id="Identificacion" ViewItem="Identificacion" ShowCaption="" Index="2" RelativeSize="50" IsNewNode="True" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="Solicitudes" Index="1" ShowCaption="False" RelativeSize="71.115173674588661" Caption="Descripcion" IsNewNode="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="Auditoria" ImageName="Lookup&amp;Reference" Caption="Auditoria" Index="1" ShowCaption="True" TextAlignMode="AlignWithChildren" RelativeSize="100" IsNewNode="True">
+            <LayoutItem Id="SolicitudesAuditoria" ViewItem="SolicitudesAuditoria" ShowCaption="" Index="0" RelativeSize="100" TextAlignMode="AutoSize" IsNewNode="True" />
+          </LayoutGroup>
+        </TabbedGroup>
+        <LayoutGroup Id="Main" RelativeSize="100" Removed="True">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="58.374792703150909">
+            <LayoutItem Id="SolicitudesAuditoria" ViewItem="SolicitudesAuditoria" ShowCaption="" Index="0" RelativeSize="100" IsNewNode="True" />
+            <LayoutGroup Id="Solicitudes" RelativeSize="55.113636363636367" Caption="Solicitudes">
+              <LayoutItem Id="Descripcion" ViewItem="Descripcion" Index="0" RelativeSize="100" SizeConstraintsType="Custom" MinSize="245, 38" IsNewNode="True" />
+              <LayoutItem Id="Persona" RelativeSize="100" Index="0" Removed="True" />
+              <LayoutItem Id="FechaRegistro" RelativeSize="50" Removed="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="Solicitudes_Reportes" RelativeSize="44.886363636363633" GroupStyle="Card">
+              <LayoutGroup Id="Solicitudes_Reportes_col1" RelativeSize="50">
+                <LayoutItem Id="NombreCompletoPersona" ViewItem="NombreCompletoPersona" Index="1" RelativeSize="21.666666666666668" IsNewNode="True" />
+                <LayoutItem Id="Carrera" RelativeSize="50" Index="2" SizeConstraintsType="Custom" MinSize="240, 34" />
+                <LayoutItem Id="Descripcion" RelativeSize="21.666666666666668" Index="2" Removed="True" />
+                <LayoutItem Id="Profesor" RelativeSize="23.287671232876711" Index="4" Removed="True" />
+                <LayoutItem Id="Estado" RelativeSize="28.333333333333332" />
+              </LayoutGroup>
+              <LayoutGroup Id="Solicitudes_Reportes_col2" RelativeSize="50">
+                <LayoutItem Id="Profesor" ViewItem="Profesor" Index="1" RelativeSize="21.666666666666668" IsNewNode="True" />
+                <LayoutItem Id="Identificacion" RelativeSize="21.666666666666668" Index="2" />
+                <LayoutItem Id="FechaRegistro" ViewItem="FechaRegistro" Index="3" RelativeSize="28.333333333333332" IsNewNode="True" />
+                <LayoutItem Id="CorrecionUsuario" RelativeSize="50" Removed="True" />
+                <LayoutItem Id="FechaCorrecion" Removed="True" />
+                <LayoutItem Id="UbicacionDePeticion" RelativeSize="28.333333333333332" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SolicitudesAuditoria_Group" TextAlignMode="AlignWithChildren" Direction="Vertical" RelativeSize="41.625207296849091" Removed="True">
+            <LayoutItem Id="SolicitudesAuditoria" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Solicitudes_Reportes_ListView" IsGroupPanelVisible="True">
+      <Columns>
+        <ColumnInfo Id="CorrecionUsuario" Index="-1" />
+        <ColumnInfo Id="FechaCorrecion" Index="-1" />
+        <ColumnInfo Id="FechaRegistro" SortOrder="Ascending" GroupIndex="0" />
+        <ColumnInfo Id="Profesor" Index="-1" />
+        <ColumnInfo Id="NombreCompletoPersona" Index="0" Width="291" />
+        <ColumnInfo Id="Descripcion" Index="1" Width="195" />
+        <ColumnInfo Id="Estado" Index="2" SortOrder="Ascending" GroupIndex="1" />
+        <ColumnInfo Id="Identificacion" Index="3" SortIndex="0" SortOrder="Descending" />
+        <ColumnInfo Id="UbicacionDePeticion" Index="4" Width="123" />
+        <ColumnInfo Id="Carrera" Index="5" Width="89" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Usuario_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="22.885572139303484">
+            <LayoutGroup Id="Usuario" RelativeSize="100">
+              <LayoutGroup Id="Usuario_col1" RelativeSize="49.95475113122172" Caption="Usuario_col1">
+                <LayoutItem Id="Username" RelativeSize="36.170212765957444" Index="0" />
+                <LayoutItem Id="Password" ViewItem="Password" Index="1" RelativeSize="27.659574468085108" IsNewNode="True" Removed="True" />
+                <LayoutItem Id="PasswordAgain" ViewItem="PasswordAgain" Index="2" RelativeSize="36.170212765957444" IsNewNode="True" />
+                <LayoutItem Id="FechaRegistro" RelativeSize="36.170212765957444" Removed="True" />
+                <LayoutItem Id="UsuarioExiste" RelativeSize="20.338983050847457" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Usuario_col2" RelativeSize="50.04524886877828">
+                <LayoutItem Id="Estado" RelativeSize="36.170212765957444" Index="0" />
+                <LayoutItem Id="CorreoElectronico" RelativeSize="63.829787234042556" Index="1" />
+                <LayoutItem Id="PasswordAgain" RelativeSize="36.170212765957444" Removed="True" />
+                <LayoutItem Id="StrCorreosContacto" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="Persona_Group" TextAlignMode="AlignWithChildren" Direction="Vertical" RelativeSize="77.114427860696523">
+            <LayoutItem Id="Persona" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Usuario_Persona_ListView">
+      <Columns>
+        <ColumnInfo Id="Apellido1" Index="-1" />
+        <ColumnInfo Id="Apellido2" Index="-1" />
+        <ColumnInfo Id="Nombre1" SortIndex="0" SortOrder="Ascending" Index="-1" />
+        <ColumnInfo Id="Nombre2" Index="-1" />
+        <ColumnInfo Id="Sexo" Index="-1" />
+        <ColumnInfo Id="NombreCompleto" SortIndex="-1" SortOrder="None" />
+        <ColumnInfo Id="FechaRegistro" Index="1" Width="231" />
+      </Columns>
+    </ListView>
+  </Views>
 </Application>

@@ -13,7 +13,7 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace reports.win.Win
+namespace TramitesInstitucional.Win
 {
     public partial class SolicitudesDetailRibbonForm : RibbonForm, IActionControlsSite, IContextMenuHolder, IWindowTemplate, IBarManagerHolder, ISupportViewChanged, ISupportUpdate, IViewSiteTemplate, ISupportStoreSettings, IViewHolder
     {

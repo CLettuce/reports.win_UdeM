@@ -51,7 +51,7 @@ namespace reports.win.Module.BusinessObjects
         [Appearance("AppSolicitudes_ReportesEstadoDisabled", Enabled = true)]
         public EstadoSolicitud? Estado { get => estado; set => SetPropertyValue(nameof(Estado), ref estado, value); }
 
-        [Size(200)]
+        [Size(1000)]
         public string Descripcion { get => descripcion; set => SetPropertyValue(nameof(Descripcion), ref descripcion, value); }
 
         public CatalogoCarrera Carrera { get => carrera; set => SetPropertyValue(nameof(Carrera), ref carrera, value); }

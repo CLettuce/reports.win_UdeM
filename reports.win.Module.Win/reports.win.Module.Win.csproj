@@ -300,6 +300,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\CustomNavigationWindowController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\CustomNavigationWindowController.Designer.cs">
+      <DependentUpon>CustomNavigationWindowController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\ShowCheckboxOnLisviewController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WinModule.cs">
       <SubType>Component</SubType>
@@ -309,7 +316,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Controllers\CustomNavigationWindowController.resx">
+      <DependentUpon>CustomNavigationWindowController.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Model.DesignedDiffs.xafml" />
+    <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Images\ExpressAppLogo.png" />

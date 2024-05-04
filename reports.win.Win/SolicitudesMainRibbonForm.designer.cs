@@ -1,5 +1,5 @@
 ﻿
-namespace reports.win.Win
+namespace TramitesInstitucional.Win
 {
     partial class SolicitudesMainRibbonForm
     {
@@ -31,6 +31,26 @@ namespace reports.win.Win
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SolicitudesMainRibbonForm));
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions4 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject13 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject14 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject15 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject16 = new DevExpress.Utils.SerializableAppearanceObject();
             this.ribbonControl = new DevExpress.ExpressApp.Win.Templates.Ribbon.XafRibbonControlV2();
             this.barActionContainerViewsHistoryNavigation = new DevExpress.ExpressApp.Win.Templates.Bars.ActionControls.BarLinkActionControlContainer();
             this.barContainerViewsHistoryNavigation = new DevExpress.XtraBars.BarLinkContainerExItem();
@@ -99,7 +119,6 @@ namespace reports.win.Win
             this.ribbonGalleryBarItem1 = new DevExpress.XtraBars.RibbonGalleryBarItem();
             this.skinRibbonGalleryBarItem1 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
             this.skinDropDownButtonItem = new DevExpress.XtraBars.SkinDropDownButtonItem();
-            this.AccionesPrincipal = new DevExpress.XtraBars.BarLinkContainerExItem();
             this.defaultPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonGroupViewsHistoryNavigation = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonGroupObjectsCreation = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -138,6 +157,8 @@ namespace reports.win.Win
             this.modelSynchronizationManager = new DevExpress.ExpressApp.Win.Templates.ModelSynchronizationManager(this.components);
             this.formStateModelSynchronizer = new DevExpress.ExpressApp.Win.Core.FormStateModelSynchronizer(this.components);
             this.contextMenu = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.repositoryItemRibbonSearchEdit1 = new DevExpress.XtraBars.Ribbon.Internal.RepositoryItemRibbonSearchEdit();
+            this.repositoryItemRibbonSearchEdit2 = new DevExpress.XtraBars.Ribbon.Internal.RepositoryItemRibbonSearchEdit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barActionContainerViewsHistoryNavigation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barActionContainerObjectsCreation)).BeginInit();
@@ -179,6 +200,8 @@ namespace reports.win.Win
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nativeMdiView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contextMenu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRibbonSearchEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRibbonSearchEdit2)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
@@ -218,7 +241,7 @@ namespace reports.win.Win
             this.ribbonControl.AutoHideEmptyItems = true;
             this.ribbonControl.AutoUpdateMergedRibbons = DevExpress.Utils.DefaultBoolean.True;
             this.ribbonControl.Controller = this.mainBarAndDockingController;
-            this.ribbonControl.EmptyAreaImageOptions.ImagePadding = new System.Windows.Forms.Padding(35, 37, 35, 37);
+            this.ribbonControl.EmptyAreaImageOptions.ImagePadding = new System.Windows.Forms.Padding(55, 57, 55, 57);
             this.ribbonControl.ExpandCollapseItem.Id = 0;
             this.ribbonControl.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl.ExpandCollapseItem,
@@ -257,11 +280,10 @@ namespace reports.win.Win
             this.barSubItemNavigationPane,
             this.ribbonGalleryBarItem1,
             this.skinRibbonGalleryBarItem1,
-            this.skinDropDownButtonItem,
-            this.AccionesPrincipal});
-            this.ribbonControl.MaxItemId = 19;
+            this.skinDropDownButtonItem});
+            this.ribbonControl.MaxItemId = 18;
             this.ribbonControl.Name = "ribbonControl";
-            this.ribbonControl.OptionsMenuMinWidth = 385;
+            this.ribbonControl.OptionsMenuMinWidth = 601;
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.defaultPage,
             this.viewPage,
@@ -692,12 +714,7 @@ namespace reports.win.Win
             // 
             this.skinDropDownButtonItem.Id = 17;
             this.skinDropDownButtonItem.Name = "skinDropDownButtonItem";
-            // 
-            // AccionesPrincipal
-            // 
-            resources.ApplyResources(this.AccionesPrincipal, "AccionesPrincipal");
-            this.AccionesPrincipal.Id = 18;
-            this.AccionesPrincipal.Name = "AccionesPrincipal";
+            this.skinDropDownButtonItem.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
             // defaultPage
             // 
@@ -917,7 +934,6 @@ namespace reports.win.Win
             this.ribbonStatusBar.AutoUpdateMergedBars = DevExpress.Utils.DefaultBoolean.True;
             this.ribbonStatusBar.ItemLinks.Add(this.barContainerStatusMessages);
             this.ribbonStatusBar.ItemLinks.Add(this.barContainerNotifications);
-            this.ribbonStatusBar.ItemLinks.Add(this.AccionesPrincipal);
             resources.ApplyResources(this.ribbonStatusBar, "ribbonStatusBar");
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbonControl;
@@ -1016,6 +1032,30 @@ namespace reports.win.Win
             this.contextMenu.Name = "contextMenu";
             this.contextMenu.Ribbon = this.ribbonControl;
             // 
+            // repositoryItemRibbonSearchEdit1
+            // 
+            this.repositoryItemRibbonSearchEdit1.AllowFocused = false;
+            resources.ApplyResources(this.repositoryItemRibbonSearchEdit1, "repositoryItemRibbonSearchEdit1");
+            this.repositoryItemRibbonSearchEdit1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            editorButtonImageOptions1.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            resources.ApplyResources(editorButtonImageOptions1, "editorButtonImageOptions1");
+            this.repositoryItemRibbonSearchEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemRibbonSearchEdit1.Buttons"))), resources.GetString("repositoryItemRibbonSearchEdit1.Buttons1"), ((int)(resources.GetObject("repositoryItemRibbonSearchEdit1.Buttons2"))), ((bool)(resources.GetObject("repositoryItemRibbonSearchEdit1.Buttons3"))), ((bool)(resources.GetObject("repositoryItemRibbonSearchEdit1.Buttons4"))), ((bool)(resources.GetObject("repositoryItemRibbonSearchEdit1.Buttons5"))), editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, resources.GetString("repositoryItemRibbonSearchEdit1.Buttons6"), ((object)(resources.GetObject("repositoryItemRibbonSearchEdit1.Buttons7"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("repositoryItemRibbonSearchEdit1.Buttons8"))), ((DevExpress.Utils.ToolTipAnchor)(resources.GetObject("repositoryItemRibbonSearchEdit1.Buttons9")))),
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemRibbonSearchEdit1.Buttons10"))), resources.GetString("repositoryItemRibbonSearchEdit1.Buttons11"), ((int)(resources.GetObject("repositoryItemRibbonSearchEdit1.Buttons12"))), ((bool)(resources.GetObject("repositoryItemRibbonSearchEdit1.Buttons13"))), ((bool)(resources.GetObject("repositoryItemRibbonSearchEdit1.Buttons14"))), ((bool)(resources.GetObject("repositoryItemRibbonSearchEdit1.Buttons15"))), editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, resources.GetString("repositoryItemRibbonSearchEdit1.Buttons16"), ((object)(resources.GetObject("repositoryItemRibbonSearchEdit1.Buttons17"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("repositoryItemRibbonSearchEdit1.Buttons18"))), ((DevExpress.Utils.ToolTipAnchor)(resources.GetObject("repositoryItemRibbonSearchEdit1.Buttons19"))))});
+            this.repositoryItemRibbonSearchEdit1.Name = "repositoryItemRibbonSearchEdit1";
+            // 
+            // repositoryItemRibbonSearchEdit2
+            // 
+            this.repositoryItemRibbonSearchEdit2.AllowFocused = false;
+            resources.ApplyResources(this.repositoryItemRibbonSearchEdit2, "repositoryItemRibbonSearchEdit2");
+            this.repositoryItemRibbonSearchEdit2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            editorButtonImageOptions3.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            resources.ApplyResources(editorButtonImageOptions3, "editorButtonImageOptions3");
+            this.repositoryItemRibbonSearchEdit2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemRibbonSearchEdit2.Buttons"))), resources.GetString("repositoryItemRibbonSearchEdit2.Buttons1"), ((int)(resources.GetObject("repositoryItemRibbonSearchEdit2.Buttons2"))), ((bool)(resources.GetObject("repositoryItemRibbonSearchEdit2.Buttons3"))), ((bool)(resources.GetObject("repositoryItemRibbonSearchEdit2.Buttons4"))), ((bool)(resources.GetObject("repositoryItemRibbonSearchEdit2.Buttons5"))), editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, resources.GetString("repositoryItemRibbonSearchEdit2.Buttons6"), ((object)(resources.GetObject("repositoryItemRibbonSearchEdit2.Buttons7"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("repositoryItemRibbonSearchEdit2.Buttons8"))), ((DevExpress.Utils.ToolTipAnchor)(resources.GetObject("repositoryItemRibbonSearchEdit2.Buttons9")))),
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemRibbonSearchEdit2.Buttons10"))), resources.GetString("repositoryItemRibbonSearchEdit2.Buttons11"), ((int)(resources.GetObject("repositoryItemRibbonSearchEdit2.Buttons12"))), ((bool)(resources.GetObject("repositoryItemRibbonSearchEdit2.Buttons13"))), ((bool)(resources.GetObject("repositoryItemRibbonSearchEdit2.Buttons14"))), ((bool)(resources.GetObject("repositoryItemRibbonSearchEdit2.Buttons15"))), editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject13, serializableAppearanceObject14, serializableAppearanceObject15, serializableAppearanceObject16, resources.GetString("repositoryItemRibbonSearchEdit2.Buttons16"), ((object)(resources.GetObject("repositoryItemRibbonSearchEdit2.Buttons17"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("repositoryItemRibbonSearchEdit2.Buttons18"))), ((DevExpress.Utils.ToolTipAnchor)(resources.GetObject("repositoryItemRibbonSearchEdit2.Buttons19"))))});
+            this.repositoryItemRibbonSearchEdit2.Name = "repositoryItemRibbonSearchEdit2";
+            // 
             // SolicitudesMainRibbonForm
             // 
             resources.ApplyResources(this, "$this");
@@ -1069,6 +1109,8 @@ namespace reports.win.Win
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nativeMdiView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.contextMenu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRibbonSearchEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRibbonSearchEdit2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1181,6 +1223,7 @@ namespace reports.win.Win
         private DevExpress.XtraBars.RibbonGalleryBarItem ribbonGalleryBarItem1;
         private DevExpress.XtraBars.SkinRibbonGalleryBarItem skinRibbonGalleryBarItem1;
         private DevExpress.XtraBars.SkinDropDownButtonItem skinDropDownButtonItem;
-        private DevExpress.XtraBars.BarLinkContainerExItem AccionesPrincipal;
+        private DevExpress.XtraBars.Ribbon.Internal.RepositoryItemRibbonSearchEdit repositoryItemRibbonSearchEdit1;
+        private DevExpress.XtraBars.Ribbon.Internal.RepositoryItemRibbonSearchEdit repositoryItemRibbonSearchEdit2;
     }
 }

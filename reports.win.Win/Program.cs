@@ -10,6 +10,7 @@ using DevExpress.Persistent.BaseImpl;
 using DevExpress.XtraEditors;
 using reports.win.Module.BusinessObjects;
 using reports.win.Module.General;
+using TramitesInstitucional.Win;
 using static reports.win.Module.BusinessObjects.SolicitudesLogonParameters;
 
 namespace reports.win.Win {
@@ -34,7 +35,8 @@ namespace reports.win.Win {
             Tracing.Initialize();
             winWindowsFormsApplication winApplication = new winWindowsFormsApplication();
             winApplication.GetSecurityStrategy().RegisterXPOAdapterProviders();
-            //if(ConfigurationManager.ConnectionStrings["ConnectionString"] != null) {
+            //if (ConfigurationManager.ConnectionStrings["ConnectionString"] != null)
+            //{
             //    winApplication.ConnectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
             //}
             winApplication.CreateCustomTemplate += delegate (object sender, CreateCustomTemplateEventArgs e)
@@ -53,11 +55,20 @@ namespace reports.win.Win {
             winApplication.LoggingOn += WinApplication_LoggingOn;
             winApplication.LoggedOn += WinApplication_LoggedOn;
             CriteriaOperator.RegisterCustomFunction(new EsUsuarioOperador());
-#if DEBUG
+
+            if (System.Diagnostics.Debugger.IsAttached)
+            {
+                winApplication.ConnectionString = "XpoProvider=MSSqlServer;Data Source=localhost;User ID=sa;Password=lucas0286;Initial Catalog=ReportsUdeM;Persist Security Info=true";
+            }
+            else
+            {
+                winApplication.ConnectionString = "XpoProvider=MSSqlServer;Data Source=localhost;User ID=sa;Password=lucas0286;Initial Catalog=ReportsUdeM;Persist Security Info=true";
+            }
+
             if (System.Diagnostics.Debugger.IsAttached && winApplication.CheckCompatibilityType == CheckCompatibilityType.DatabaseSchema) {
                 winApplication.DatabaseUpdateMode = DatabaseUpdateMode.UpdateDatabaseAlways;
             }
-#endif
+
             try {
                 winApplication.Setup();
                 winApplication.Start();
