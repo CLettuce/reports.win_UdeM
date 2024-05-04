@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Application Logo="ExpressAppLogo">
+<Application Logo="BO_MyDetails" Company="CLettuce" Title="Reportes UdeM" Description="Sistema desarrollado para optar al título de Ing. en Sistemas" Copyright="https://github.com/CLettuce">
   <NavigationItems NavigationStyle="TreeList" ShowImages="True" DefaultChildItemsDisplayStyle="LargeIcons" StartupNavigationItem="">
     <Items>
       <Item Id="ReportesUdeM" Caption="Reportes UdeM" Index="0" IsNewNode="True">
@@ -184,20 +184,20 @@
         <TabbedGroup Id="MainTab" RelativeSize="100" Index="0" IsNewNode="True">
           <LayoutGroup Id="Main" Index="0" RelativeSize="100" ShowCaption="True" ImageName="BO_Address" Caption="Principal" IsNewNode="True">
             <LayoutGroup Id="SimpleEditors" Index="0" ShowCaption="False" RelativeSize="100" IsNewNode="True">
-              <LayoutGroup Id="Solicitudes_Reportes" Index="0" Direction="Horizontal" ShowCaption="True" RelativeSize="26.452905811623246" GroupStyle="Card" IsNewNode="True">
-                <LayoutGroup Id="Solicitudes_Reportes_col1" Index="0" ShowCaption="False" RelativeSize="49.789621318373072" IsNewNode="True">
+              <LayoutGroup Id="Solicitudes_Reportes" Index="0" Direction="Horizontal" ShowCaption="True" RelativeSize="32.835820895522389" GroupStyle="Card" IsNewNode="True">
+                <LayoutGroup Id="Solicitudes_Reportes_col1" Index="0" ShowCaption="False" RelativeSize="49.805447470817121" IsNewNode="True">
                   <LayoutItem Id="Estado" ViewItem="Estado" ShowCaption="" Index="0" RelativeSize="36.170212765957444" IsNewNode="True" />
                   <LayoutItem Id="NombreCompletoPersona" ViewItem="NombreCompletoPersona" Index="1" RelativeSize="27.659574468085108" IsNewNode="True" />
                   <LayoutItem Id="Carrera" ViewItem="Carrera" ShowCaption="" Index="2" RelativeSize="36.170212765957444" SizeConstraintsType="Default" MinSize="240, 34" IsNewNode="True" />
                 </LayoutGroup>
-                <LayoutGroup Id="Solicitudes_Reportes_col2" Index="1" ShowCaption="False" RelativeSize="50.210378681626928" IsNewNode="True">
+                <LayoutGroup Id="Solicitudes_Reportes_col2" Index="1" ShowCaption="False" RelativeSize="50.194552529182879" IsNewNode="True">
                   <LayoutItem Id="UbicacionDePeticion" ViewItem="UbicacionDePeticion" ShowCaption="" Index="0" RelativeSize="36.170212765957444" IsNewNode="True" />
                   <LayoutItem Id="Identificacion" ViewItem="Identificacion" ShowCaption="" Index="1" RelativeSize="27.659574468085108" IsNewNode="True" />
                   <LayoutItem Id="FechaRegistro" ViewItem="FechaRegistro" Index="2" RelativeSize="36.170212765957444" IsNewNode="True" />
                 </LayoutGroup>
               </LayoutGroup>
-              <LayoutItem Id="Descripcion" ViewItem="Descripcion" SizeConstraintsType="Custom" MinSize="240, 26" Index="1" RelativeSize="39.078156312625254" IsNewNode="True" />
-              <LayoutGroup Id="Solicitudes" Index="2" ShowCaption="False" RelativeSize="34.4689378757515" Caption="Descripcion" IsNewNode="True" />
+              <LayoutItem Id="Descripcion" ViewItem="Descripcion" SizeConstraintsType="Custom" MinSize="240, 26" Index="1" RelativeSize="35.572139303482587" IsNewNode="True" />
+              <LayoutGroup Id="Solicitudes" Index="2" ShowCaption="False" RelativeSize="31.592039800995025" Caption="Descripcion" IsNewNode="True" />
             </LayoutGroup>
           </LayoutGroup>
           <LayoutGroup Id="Auditoria" ImageName="Lookup&amp;Reference" Caption="Auditoria" Index="1" ShowCaption="True" TextAlignMode="AlignWithChildren" RelativeSize="100" IsNewNode="True">
