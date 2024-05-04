@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "reports.win.Module.Win", "r
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "reports.win.Win", "reports.win.Win\reports.win.Win.csproj", "{D0453713-C14C-4594-B152-7B834415610E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UdeMReports.API", "UdeMReports.API\UdeMReports.API.csproj", "{D713D0DE-9FBA-4506-B0F8-FFEECE47FADC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,6 +36,12 @@ Global
 		{D0453713-C14C-4594-B152-7B834415610E}.EasyTest|Any CPU.Build.0 = EasyTest|Any CPU
 		{D0453713-C14C-4594-B152-7B834415610E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0453713-C14C-4594-B152-7B834415610E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D713D0DE-9FBA-4506-B0F8-FFEECE47FADC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D713D0DE-9FBA-4506-B0F8-FFEECE47FADC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D713D0DE-9FBA-4506-B0F8-FFEECE47FADC}.EasyTest|Any CPU.ActiveCfg = Debug|Any CPU
+		{D713D0DE-9FBA-4506-B0F8-FFEECE47FADC}.EasyTest|Any CPU.Build.0 = Debug|Any CPU
+		{D713D0DE-9FBA-4506-B0F8-FFEECE47FADC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D713D0DE-9FBA-4506-B0F8-FFEECE47FADC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
