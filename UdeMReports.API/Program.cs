@@ -11,8 +11,11 @@ builder.Services.AddSwaggerGen();
 
 // Configura la cadena de conexión para XPO
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-XpoDefault.DataLayer = XpoDefault.GetDataLayer(connectionString, AutoCreateOption.DatabaseAndSchema);
+XpoDefault.DataLayer = new ThreadSafeDataLayer(XpoDefault.GetConnectionProvider(connectionString, AutoCreateOption.DatabaseAndSchema));
 XpoDefault.Session = null;
+
+
+
 
 builder.Services.AddScoped<UnitOfWork>();
 

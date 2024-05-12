@@ -47,13 +47,13 @@ namespace reports.win.Module.General
             MailBee.Global.LicenseKey = "MN120-43CE31BA89419EEADC5EB0B72C4E-A8FE";
 
             SmtpServer server = new SmtpServer(Sender.Servidor, Sender.CorreoElectronico, Sender.Password);
-            server.SslMode = Sender.ModoSSL.HasValue ? Sender.ModoSSL.Value : MailBee.Security.SslStartupMode.Manual; // Manejo de valores nulos
+            server.SslMode = Sender.ModoSSL.HasValue ? Sender.ModoSSL.Value : MailBee.Security.SslStartupMode.UseStartTls; // Manejo de valores nulos
             server.SslProtocol = Sender.ProtocoloSeguridad.HasValue ? Sender.ProtocoloSeguridad.Value : MailBee.Security.SecurityProtocol.Auto; // Manejo de valores nulos
             server.Port = Sender.Puerto.HasValue ? Sender.Puerto.Value : 0; // Manejo de valores nulos
 
             Smtp mailer = new Smtp();
             mailer.SmtpServers.Add(server);
-            mailer.Message.From = new EmailAddress("carlos.rodlopez@gmail.com", "Carlos Lopez");
+            mailer.Message.From = new EmailAddress("carlos.rodlopez@gmail.com", "Universidad de Managua");
             mailer.Message.To.AsString = Destinatario;
             mailer.Message.Cc.AsString = DestCC;
             mailer.Message.Bcc.AsString = DestCCO;
