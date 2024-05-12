@@ -39,7 +39,6 @@ namespace UdeMReports.API.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, new { Message = "Error en el servidor al verificar el usuario.", Error = ex.Message });
             }
         }
-
         [HttpPost("InsertarSolicitud")]
         public IActionResult InsertarSolicitud([FromBody] SolicitudRequest solicitudRequest)
         {
@@ -47,33 +46,57 @@ namespace UdeMReports.API.Controllers
             {
                 using (UnitOfWork uow = new UnitOfWork())
                 {
-                        //DD7EA9A1-43BA-4E42-A100-5C1021AAA50B
-                    var persona_guardar = uow.Query<Persona>().Where(c => c.Nombre1 == solicitudRequest.NombrePersona).FirstOrDefault();
-                    Solicitudes solicitud = new Solicitudes(uow);
-                   
+                    var persona_guardar = uow.Query<Persona>().FirstOrDefault(c => c.Nombre1 == solicitudRequest.NombrePersona);
 
-                    Solicitudes_Reportes solicitud_Reportes = new Solicitudes_Reportes(uow);
-                    var carrera = uow.Query<CatalogoCarrera>().FirstOrDefault(c => c.Carrera == solicitudRequest.Carrera);
-                    var ubicacion = uow.Query<CatalogoUbicacion>().FirstOrDefault(c => c.Ubicacion == solicitudRequest.UbicacioPeticion);
-                    
-                    solicitud_Reportes.Estado = Solicitudes_Reportes.EstadoSolicitud.Publicado;
-                    solicitud_Reportes.Descripcion = solicitudRequest.Descripcion;
-                    solicitud_Reportes.Carrera = carrera;
-                    solicitud_Reportes.UbicacionDePeticion = ubicacion;
-                    solicitud_Reportes.FechaRegistro = DateTime.Now;
-                    solicitud_Reportes.Save();
                     if (persona_guardar != null)
                     {
-                        persona_guardar.Solicitude.Add(solicitud);
+                        var identificacionPersona = persona_guardar.Identificaciones.FirstOrDefault();
+
+                        if (identificacionPersona != null)
+                        {
+                            // Aquí accedes al número de identificación
+                            var numeroIdentificacion = identificacionPersona.NumeroIdentificacion;
+
+                            // Resto de tu lógica
+                            Solicitudes solicitud = new Solicitudes(uow);
+                            Solicitudes_Reportes solicitud_Reportes = new Solicitudes_Reportes(uow);
+                            var carrera = uow.Query<CatalogoCarrera>().FirstOrDefault(c => c.Carrera == solicitudRequest.Carrera);
+                            var ubicacion = uow.Query<CatalogoUbicacion>().FirstOrDefault(c => c.Ubicacion == solicitudRequest.UbicacionPeticion);
+
+                            solicitud_Reportes.Estado = Solicitudes_Reportes.EstadoSolicitud.Publicado;
+                            solicitud_Reportes.Descripcion = solicitudRequest.Descripcion;
+                            solicitud_Reportes.Carrera = carrera;
+                            solicitud_Reportes.UbicacionDePeticion = ubicacion;
+                            solicitud_Reportes.FechaRegistro = DateTime.Now;
+                            solicitud_Reportes.Persona = persona_guardar;
+
+                            // Buscar el objeto PersonaIdentificaciones por el número de identificación
+                            var identificacion = uow.Query<PersonaIdentificaciones>().FirstOrDefault(c => c.NumeroIdentificacion == numeroIdentificacion);
+                            if (identificacion != null)
+                            {
+                                solicitud_Reportes.Identificacion = identificacion;
+                            }
+                            else
+                            {
+                                return NotFound(new { Message = "No se encontró ninguna identificación con el número proporcionado." });
+                            }
+
+                            solicitud_Reportes.Save();
+
+                            persona_guardar.Solicitude.Add(solicitud);
+                            uow.CommitChanges();
+
+                            return Ok(new { Message = "Solicitud insertada correctamente." });
+                        }
+                        else
+                        {
+                            return NotFound(new { Message = "La persona no tiene ninguna identificación asociada." });
+                        }
                     }
                     else
                     {
                         return NotFound(new { Message = "No se encontró ninguna persona con el nombre proporcionado." });
                     }
-
-                    uow.CommitChanges();
-
-                    return Ok(new { Message = "Solicitud insertada correctamente." });
                 }
             }
             catch (Exception ex)
@@ -81,6 +104,9 @@ namespace UdeMReports.API.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, new { Message = "Error en el servidor al insertar la solicitud.", Error = ex.Message });
             }
         }
+
+
+
     }
 
     public class LoginRequest
@@ -95,7 +121,7 @@ namespace UdeMReports.API.Controllers
         public string NombrePersona { get; set; }
         public string Carrera { get; set; }
         public string Descripcion { get; set; }
-        public string UbicacioPeticion { get; set; }
+        public string UbicacionPeticion { get; set; }
         
 
         public SolicitudRequest()
@@ -103,7 +129,7 @@ namespace UdeMReports.API.Controllers
             NombrePersona = string.Empty;
             Carrera = string.Empty;
             Descripcion = string.Empty;
-            UbicacioPeticion = string.Empty;
+            UbicacionPeticion = string.Empty;
             
         }
 
