@@ -42,11 +42,12 @@ namespace UdeMReports.API.Controllers
         [HttpPost("InsertarSolicitud")]
         public IActionResult InsertarSolicitud([FromBody] SolicitudRequest solicitudRequest)
         {
+
             try
             {
                 using (UnitOfWork uow = new UnitOfWork())
                 {
-                    var persona_guardar = uow.Query<Persona>().FirstOrDefault(c => c.Nombre1 == solicitudRequest.NombrePersona);
+                    var persona_guardar = uow.Query<Persona>().FirstOrDefault(c => c.Usuario.Username == solicitudRequest.Usuario);
 
                     if (persona_guardar != null)
                     {
@@ -118,19 +119,21 @@ namespace UdeMReports.API.Controllers
     public class SolicitudRequest
     {
 
-        public string NombrePersona { get; set; }
+        //public string NombrePersona { get; set; }
         public string Carrera { get; set; }
         public string Descripcion { get; set; }
         public string UbicacionPeticion { get; set; }
+        public string Usuario { get; set; }
+
         
 
         public SolicitudRequest()
         {
-            NombrePersona = string.Empty;
+            //NombrePersona = string.Empty;
             Carrera = string.Empty;
             Descripcion = string.Empty;
             UbicacionPeticion = string.Empty;
-            
+            Usuario = string.Empty;
         }
 
     }

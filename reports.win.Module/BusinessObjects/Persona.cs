@@ -65,4 +65,4 @@ namespace reports.win.Module.BusinessObjects
         public XPCollection<PersonaIdentificaciones> Identificaciones { get { return GetCollection<PersonaIdentificaciones>(nameof(Identificaciones)); } }
 
     }
-}
+}   
