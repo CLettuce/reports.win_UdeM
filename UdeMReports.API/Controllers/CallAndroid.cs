@@ -106,9 +106,89 @@ namespace UdeMReports.API.Controllers
             }
         }
 
+        [HttpGet("ObtenerSolicitudesPorUsuario/{username}")]
+        public IActionResult ObtenerSolicitudesPorUsuario(string username)
+        {
+            try
+            {
+                using (UnitOfWork uow = new UnitOfWork())
+                {
+                    var persona = uow.Query<Persona>().FirstOrDefault(c => c.Usuario.Username == username);
+
+                    if (persona != null)
+                    {
+                        var solicitudes = uow.Query<Solicitudes_Reportes>()
+                            .Where(sr => sr.Persona.Oid == persona.Oid)
+                            .OrderByDescending(sr => sr.FechaRegistro)
+                            .Select(sr => new
+                            {
+                                Estado = sr.Estado.HasValue ? sr.Estado.Value.ToString() : null,
+                                sr.Descripcion,
+                                sr.FechaRegistro
+                            }).ToList();
+
+                        return Ok(solicitudes);
+                    }
+                    else
+                    {
+                        return NotFound(new { Message = "No se encontró ninguna persona con el nombre de usuario proporcionado." });
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, new { Message = "Error en el servidor al obtener las solicitudes.", Error = ex.Message });
+            }
+        }
+
+        [HttpGet("ObtenerInfoUsuario/{username}")]
+        public IActionResult ObtenerInfoUsuario(string username)
+        {
+            try
+            {
+                using (UnitOfWork uow = new UnitOfWork())
+                {
+                    var persona = uow.Query<Persona>().FirstOrDefault(c => c.Usuario.Username == username);
+
+                    if (persona != null)
+                    {
+                        var usuario = persona.Usuario;
+                        var identificacion = persona.Identificaciones.FirstOrDefault();
+
+                        var response = new PersonaInfoResponse
+                        {
+                            NombreCompleto = persona.NombreCompleto,
+                            Username = usuario.Username,
+                            CorreoElectronico = usuario.CorreoElectronico,
+                            NumeroIdentificacion = identificacion != null ? identificacion.NumeroIdentificacion : "No disponible"
+                        };
+
+                        return Ok(response);
+                    }
+                    else
+                    {
+                        return NotFound(new { Message = "No se encontró ninguna persona con el nombre de usuario proporcionado." });
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, new { Message = "Error en el servidor al obtener la información del usuario.", Error = ex.Message });
+            }
+        }
+
 
 
     }
+
+    public class PersonaInfoResponse
+    {
+        public string? NombreCompleto { get; set; }
+        public string? Username { get; set; }
+        public string? CorreoElectronico { get; set; }
+        public string? NumeroIdentificacion { get; set; }
+    }
+
 
     public class LoginRequest
     {
